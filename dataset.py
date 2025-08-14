@@ -129,7 +129,7 @@ class ImageDataset(Dataset):
             except:
                 import traceback
                 traceback.print_exc()
-                logging.info(f'Corrupted image is found: {self.name}, {idx}, {label}, {len(label)}')
+                logging.info(f"Corrupted image found: {self.name}, {idx}")
                 return self._next_image(idx)
             return image, label, idx
 
